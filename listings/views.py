@@ -23,10 +23,6 @@ def listing(request, listing_id):
 
     return render(request,'listings/listing.html', context)
 
-def panorama(request,image):
-    print(f"-------{image}-----")
-    context = {'image':image}
-    return render(request,'listings/360-viewer.html',context)
 
 def search(request):
     queryset_list = Listing.objects.order_by('-list_date')
@@ -69,3 +65,8 @@ def search(request):
         'values': request.GET
     }
     return render(request,'listings/search.html',context)
+
+
+def panorama(request,image):
+    context = {'image':image}
+    return render(request,'listings/360-viewer.html',context)

@@ -93,7 +93,7 @@
             
             {% if listing.photo_360_1 %}
             <div class="col-4 col-lg-3 mx-auto mb-2">
-              <a class="btn btn-info" href="{% url 'panorama' image=listing.photo_360_2.url %}" target="_blank">
+              <a class="btn btn-info" href="{% url 'panorama' image=listing.photo_360_1.url %}" target="_blank">
                 <span class="eicon mx-auto"></span>
                 <!-- <span class="pb-4"></span> -->
               </a>
@@ -101,7 +101,7 @@
             {% endif %}
             {% if listing.photo_360_2 %}
             <div class="col-4 col-lg-3 mx-auto mb-2">
-              <a class="btn btn-info" href="{{listing.photo_360_2.url}}" target="_blank">
+              <a class="btn btn-info" href="{% url 'panorama' image=listing.photo_360_2.url %}" target="_blank">
                 <span class="eicon mx-auto"></span>
                 <!-- <span class="pb-4"></span> -->
               </a>
@@ -109,7 +109,7 @@
             {% endif %}
             {% if listing.photo_360_3 %}
             <div class="col-4 col-lg-3 mx-auto mb-2">
-              <a class="btn btn-info" href="{{listing.photo_360_3.url}}" target="_blank">
+              <a class="btn btn-info" href="{% url 'panorama' image=listing.photo_360_3.url %}" target="_blank">
                 <span class="eicon mx-auto"></span>
                 <!-- <span class="pb-4"></span> -->
               </a>
@@ -117,7 +117,7 @@
             {% endif %}
             {% if listing.photo_360_4 %}
             <div class="col-4 col-lg-3 mx-auto mb-2">
-              <a class="btn btn-info" href="{{listing.photo_360_4.url}}" target="_blank">
+              <a class="btn btn-info" href="{% url 'panorama' image=listing.photo_360_4.url %}" target="_blank">
                 <span class="eicon mx-auto"></span>
                 <!-- <span class="pb-4"></span> -->
               </a>
