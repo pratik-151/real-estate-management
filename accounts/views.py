@@ -107,9 +107,9 @@ def forgotPassword(request):
 
             messages.success(request, 'Password reset email has been sent to your email address')
             return redirect('login')
-    else:
-        messages.error(request, 'Account does not exist')
-        return redirect('forgotPassword')
+        else:
+            messages.error(request, 'Account does not exist')
+            return redirect('forgotPassword')
     return render(request, 'accounts/forgotpassword.html')
 
 
