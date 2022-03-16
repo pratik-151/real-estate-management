@@ -67,6 +67,7 @@ class Listing(models.Model):
     photo_360_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_360_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     photo_360_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    map_coordinates = models.CharField(max_length=255, blank=True)
     is_publish = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
     def __str__(self):

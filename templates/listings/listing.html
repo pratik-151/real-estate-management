@@ -125,13 +125,23 @@
             {% endif %}
             
           </div>
+          <div class="row mb-2 fields">
+            <div class="col-md-12 text-center h3">
+              <p>
+                <i class="fas fa-map-marker text-secondary"></i> {{listing.city}} {{listing.state}}, {{listing.zipcode}}
+              </p>
+            </div>
+            {% if listing.map_coordinates %}
+            <div class="col-md-12">
+              <div class="map-responsive">
+             <iframe src="https://maps.google.com/maps?q={{listing.map_coordinates}}&z=15&output=embed" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+            {% endif %}
+          </div>
           <!-- Fields -->
           <div class="row mb-5 fields">
-            <div class="col-md-12 text-center h3">
-            <p>
-              <i class="fas fa-map-marker text-secondary"></i> {{listing.city}} {{listing.state}}, {{listing.zipcode}}
-            </p>
-            </div>
+            
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item text-secondary">

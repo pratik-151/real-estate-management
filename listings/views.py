@@ -20,6 +20,7 @@ def index(request):
 def listing(request, listing_id):
     listing = get_object_or_404(Listing,pk=listing_id)
     context = {'listing': listing}
+    print(f"{listing.map_coordinates}")
 
     return render(request,'listings/listing.html', context)
 
